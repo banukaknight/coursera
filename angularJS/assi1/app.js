@@ -14,7 +14,8 @@ angular.module('FoodCalculator', [])
   };
 
 function checkFood(string) {
-const foods = string.split(',');
+const foods = string.split(',').filter(x => x);;
+//filter allow ignore of empty stuff
 const foodcount = foods.length;
 
   if (foods=="") return ["Please enter data first","red"];

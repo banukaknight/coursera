@@ -1,9 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app='ShoppingListCheckOff'>
   <head>
     <title>Shopping List Check Off</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <script src="styles/angular.min.js"></script>
+    <script src="app.js"></script>
+
     <style>
       .emptyMessage {
         font-weight: bold;
@@ -26,25 +29,31 @@
   <div class="container">
   <h1>Shopping List Check Off</h1>
 
-  <div class="row">
+  <div class="row" >
 
     <!-- To Buy List -->
-    <div class="col-md-6">
+    <div id ="list1" class="col-md-6" ng-controller='ToBuyController as list1'>
      <h2>To Buy:</h2>
      <ul>
-       <li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
-       <li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
+      <li ng-repeat="item in list1.items1" >
+          Buy {{ item.quantity }} of {{ item.name }}
+          <button  ng-click="list1.removeItem($index, item.quantity, item.name);"
+          class="btn btn-default" style="line-height: 100%;  float:right; margin-right: 20%">
+          <span class="glyphicon glyphicon-ok"></span>Bought!</button>
+      </li>
      </ul>
-     <div class="emptyMessage">Everything is bought!</div>
+     <div class="emptyMessage" ng-if="list1.items1 == false">Everything is bought!</div>
     </div>
 
     <!-- Already Bought List -->
-    <div class="col-md-6">
+    <div class="col-md-6" ng-controller='AlreadyBoughtController as list2'>
      <h2>Already Bought:</h2>
      <ul>
-       <li>Bought 10 cookies</li>
+       <li ng-repeat="item in list2.items2">
+          Bought {{ item.quantity }} : {{ item.name }}
+        </li>
      </ul>
-     <div class="emptyMessage">Nothing bought yet.</div>
+     <div class="emptyMessage" ng-if="list2.items2 == false">Nothing bought yet.</div>
     </div>
   </div>
 </div>
