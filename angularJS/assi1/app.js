@@ -2,8 +2,12 @@
 'use strict';
 
 angular.module('FoodCalculator', [])
+.controller('FoodCalculatorController', FoodCalculatorController);
 
-.controller('FoodCalculatorController', function ($scope) {
+//line to avoid minifiying error
+FoodCalculatorController.$inject = ['$scope'];
+
+function FoodCalculatorController ($scope) {
   $scope.foodList = "";
   $scope.totalValue = "";
 
@@ -22,9 +26,7 @@ const foodcount = foods.length;
   else if (foodcount<4) return ["Enjoy!","green"];
   else return ["Too much!","green"];
 }
-
-
-});
+}
 
 
 })();

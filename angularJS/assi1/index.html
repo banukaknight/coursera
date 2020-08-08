@@ -19,8 +19,9 @@
              placeholder="list comma separated dishes you usually have for lunch"
              class="form-control" ng-model="foodList" >
          </div>
-         <div class="form-group">
+         <div class="form-group" >
              <button class="btn btn-default" ng-click="displayMsg();">Check If Too Much</button>
+             <small>, , ,ignores empty strings and commas in count ,,,</small>
          </div>
          <div class="form-group message">
            Message:  <span style="color: {{myColor}}"> {{totalValue}} </span>
