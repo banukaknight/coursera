@@ -3,8 +3,8 @@
         <div class="clearfix" ng-if="$index % 4 == 0"></div>
         <div class="col-md-3">
             <div class="well">
-                <h4>{{item.name}}</h2>
-                <h5>{{item.short_name}}</h3>
+                <h4 class="bg-success">{{item.name}}</h4>
+                <h5>{{item.short_name}}</h5>
                 <small>{{item.description}}</small><br>
                 <input type="button" ng-click="menu.onRemove({index: $index})" class="btn btn-sm btn-danger" value="Remove Item">
             </div>
