@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.column {
+  background-color: gray !important;
+  height: auto;
+  margin-bottom: 5vh;
+}
+.ourmenu {
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+}
