@@ -1,0 +1,11 @@
+<div>This is TAB 2 content</div>
+
+<div ng-controller='MenuCategoriesController as menu'>
+      <h3>tab 2List of Menu Categories</h3>
+      <ul>
+        <li ng-repeat="category in menu.categories">
+          (<a href="" ng-click="menu.logMenuItems(category.short_name);">{{ category.short_name }}</a>)
+          {{ category.name }}
+        </li>
+      </ul>
+    </div>

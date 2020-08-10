@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app='RoutingApp'>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Resturent SIte</title>
+  </head>
+  <body>
+    <h1>Welcome to our Restaurant</h1>
+
+    <div class="tabs">
+      <a ui-sref="tab1" ui-sref-active="activeTab">Tab 1ww</a>
+      <a ui-sref="tab2" ui-sref-active="activeTab">Tab 2</a>
+      <button ui-sref="tab2">Tab 2</button>
+    </div>
+
+
+
+
+
+    <ui-view></ui-view>
+
+    <!-- Libraries -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <!-- Modules -->
+    <script src="src/app.js"></script>
+
+  </body>
+</html>

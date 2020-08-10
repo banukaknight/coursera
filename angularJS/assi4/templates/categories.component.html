@@ -1,0 +1,6 @@
+<div>
+	<button ng-repeat="category in $ctrl.categories" class="btn btn-info btn-block"
+	ui-sref="items({categoryShortName: category.short_name, categoryName:category.name})">
+	<b>	{{category.name}} </b>
+	</button>
+</div>

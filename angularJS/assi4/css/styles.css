@@ -1,0 +1,29 @@
+body {
+
+  color: black;
+  background: url(../imgs/myimage1.jpg) repeat;
+  background-color: lightblue;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-shadow: 4px 4px 5px white;
+}
+
+.mydiv2{
+background: url(../imgs/myimage2.jpg) repeat;
+background-color: lightblue;
+}
+.mydiv3{
+background: url(../imgs/myimage3.jpg) repeat;
+background-color: lightblue;
+}
+
+ul{
+  font-size: 2em;
+}
+
+h1{
+  text-align: center;
+}
+
+td{
+  font-weight: bold;
+}
