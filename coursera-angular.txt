@@ -1,0 +1,49 @@
+setting up package.json
+In this exercise you learnt to set up package.json, install a npm package and start a development server.
+1> go in git repo (folder)
+CMD:
+npm init
+2> istall NPM module, lite-server (in same folder)
+CMD:
+npm install lite-server --save-dev
+3> to deply server
+CMD:
+npm start
+==========
+
+In this exercise you installed the Angular CLI tool and created a basic Angular project and served up the compiled project to your browser.
+
+//To install angular-cli globally, type the following at the prompt:
+>npm install -g @angular/cli@6.2.1
+//learn more about the various commands that this CLI provides
+>ng help
+//setting up proj using Angular-CLI & serving
+1> CREATE new PROJECT : go to desired &
+CMD:
+ng new conFusion --style=scss
+2> move in to the created project folder
+CMD: cd proj1
+3> compile and open proj
+CMD:
+ng build
+ng serve --open
+4> setup folder as git repo
+CMD:
+git init
+git status
+git log --oneline
+=======================
+In this exercise we learnt to use Angular Material and Flex Layout NgModules in our Angular application.
+
+//Configure your Angular Project to use Angular Material
+npm install @angular/material@6.4.7 --save
+npm install @angular/cdk@6.4.7 --save
+npm install --save @angular/animations@6.1.7
+npm install --save hammerjs@2.0.8
+
+//Next, include the following into the <head> of index.html to make use of Material Design icons
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+//Next, install Angular Flex Layout as follows:
+npm install --save @angular/flex-layout@6.0.0-beta.18
+
